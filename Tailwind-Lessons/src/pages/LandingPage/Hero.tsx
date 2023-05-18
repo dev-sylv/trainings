@@ -1,7 +1,11 @@
 import React from "react";
 
 const Hero = () => {
-  return <div>Hero</div>;
+  return (
+    <div>
+      <div className="w-full h-screen bg-heroBg"></div>
+    </div>
+  );
 };
 
 export default Hero;
