@@ -35,3 +35,20 @@ export const searchUser = async (req: Request, res: Response) => {
     });
   }
 };
+
+// Get one users:
+export const getoneUsers = async (req: Request, res: Response) => {
+  try {
+    const users = await userModel.findById(req.params.userID);
+
+    return res.status(200).json({
+      message: "gotten",
+      data: users,
+    });
+  } catch (error) {
+    return res.status(400).json({
+      message: "failed to get all users",
+      data: error,
+    });
+  }
+};
